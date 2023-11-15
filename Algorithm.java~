@@ -1,0 +1,39 @@
+public class Algorithm {
+  public Algorithms(){}
+    public int numDigits(int number) {
+        int digits = 1;
+        while (number % 10 != 0) {
+            number %= 10;
+            digits++;
+        }
+        return digits;
+    }
+
+    public boolean firstDivisibleSec(int first, int second) {
+        if (((double) first / (double) second) == first / second) return true;
+        return false;
+    }
+    public int sumOddNums(int num1, int num2){
+      int sum = 0;
+      int i = 0;
+      if (num1 > num2) i = num2;
+      else i = num1;
+      if (i == num2){
+        while (i != num1){
+          if (i % 2 != 0){
+            sum += i;
+          }
+          i++;
+        }
+      }
+      else if (i == num1){
+        while (i != num2){
+          if (i % 2 != 0){
+            sum += i;
+          }
+          i++;
+        }
+      }
+    return sum;
+    }
+}
